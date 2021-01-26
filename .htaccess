@@ -1,0 +1,36 @@
+RewriteEngine On
+ErrorDocument 404 http://localhost/prjs/website/admin/error-404.php
+ErrorDocument 500 http://localhost/prjs/website/admin/error-500.php
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteRule		^home?$		http://localhost/prjs/website/index.php	[QSA,NC,L]
+
+#RewriteRule		^home?$		http://localhost/prjs/website/index.php	[QSA,NC,L]
+
+RewriteRule		^product-category?$	http://localhost/prjs/website/index.php?page=category	[NC,L]
+
+RewriteRule		^contact-us?$	http://localhost/prjs/website/index.php?page=contact	[NC,L]
+
+RewriteRule		^about-us?$	http://localhost/prjs/website/index.php?page=about	[NC,L]
+
+RewriteRule		^terms-and-conditions?$	http://localhost/prjs/website/index.php?page=terms	[NC,L]
+
+RewriteRule		^privacy?$	http://localhost/prjs/website/index.php?page=privacy	[NC,L]
+
+RewriteRule		^shipping-&-payments?$	http://localhost/prjs/website/index.php?page=ship	[NC,L]
+
+RewriteRule		^certificates?$	http://localhost/prjs/website/index.php?page=certificates	[NC,L]
+
+RewriteRule		^events?$	http://localhost/prjs/website/index.php?page=events	[NC,L]
+
+RewriteRule		^how-do-we-work?$	http://localhost/prjs/website/index.php?page=work	[NC,L]
+
+RewriteRule		^our-team?$	http://localhost/prjs/website/index.php?page=team	[NC,L]
+
+RewriteRule		^cart?$	http://localhost/prjs/website/index.php?page=cart	[NC,L]
+
+RewriteRule		^send-inquiry?$	http://localhost/prjs/website/index.php?page=inquire	[NC,L]
+
+RewriteRule    ^products/([0-9a-zA-Z-]+)$	http://localhost/prjs/website/index.php?page=plist&pid=$1         [QSA,NC,L]
+
