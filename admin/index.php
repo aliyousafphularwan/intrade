@@ -9,17 +9,15 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>AYS - <?php 
+    <title>Intrade International - <?php 
         if ($_GET["page"]) {
             echo $_GET['page'];
         }else{
-            echo $_GET['page'];
+            echo "Admin Panel";
         }
     ?></title>
 
@@ -87,31 +85,6 @@
     <script src="js/demo/chart-pie-demo.js"></script>
     <script type="js/main.js"></script>
     <script type="text/javascript">
-
-        $(document).ready(function(){
-            $().on('submit',function(e){
-                e.preventDefault();
-                var frmDta = new FormData(this);
-
-                $.ajax({
-                    type:'POST',
-                    url: 'incs/addbanners.php',
-                    data:formData,
-                    cache:false,
-                    contentType: false,
-                    processData: false,
-                    success:function(data){
-                        console.log("success");
-                        console.log(data);
-                    },
-                    error: function(data){
-                        console.log("error");
-                        console.log(data);
-                    }
-                });
-
-            })
-        });
         
         function getCategories(){
 
@@ -149,26 +122,24 @@
 
         }
 
+        function showBanner(){
 
+            $.ajax({
 
-        // function selectSubcategory(){
+                url: "incs/getslider.php",
+                type: "POST",
+                success: function(data){
+                    $('.showbannerdata').html(data);
+                }
 
-        //     $.ajax({
+            });
 
-        //         url: 'getsubcats.php',
-        //         type: 'post',
-        //         success: function(response){
-        //             $().html(response);
-        //         }
-
-        //     });
-
-        // }
+        }
 
         getCategories();
         getSubCategories()
         showProducts();
-        showbanners();
+        showBanner();
 
     </script>
 

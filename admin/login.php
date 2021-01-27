@@ -3,14 +3,13 @@
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="col-xl-4 col-lg-6 col-md-6">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
+                        <!-- Nested Row within Card Body bg-login-image -->
+                        <div class="row mx-auto">
+                            <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome</h1>
@@ -26,26 +25,20 @@
                                                 name="password" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
+                                            <a href="forgetpassword.php">forget password?</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="">
                                                 <?php 
                                                     if (isset($_POST["logmit"]) && !isset($_SESSION["admin"])) {
-                                                        echo "wrong username OR password";
+                                                        echo "<p style='font-size:10pt;background:#ff4646;color:#fff;padding:5px 10px;border-radius:10px;'>wrong username OR password</p>";
                                                     }
                                                 ?>
                                                 
                                             </div>
                                         </div>
                                         <input type="submit" name="logmit" class="btn btn-primary btn-user btn-block" value="Login">
-                                            
-                                       
                                     </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

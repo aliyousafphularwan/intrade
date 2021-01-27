@@ -24,6 +24,10 @@
 
 	<?php
 
+	if (isset($_POST['imgpos'])) {
+		echo $_POST['imgpos'];
+	}
+
 		if (isset($_POST['banmit'])) {
 			$upload = "uploads/banners/";
 			$file_name = $_FILES["bimg"]["name"];

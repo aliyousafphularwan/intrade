@@ -19,7 +19,7 @@
 	<ul class="navbar-nav cnbu">
 		<li class="nav-item"><a class="nav-link" style="color: #003a31;" href="home">Home</a></li>
 		<li class="nav-item"><a class="nav-link" style="color: #003a31;" href="about-us">About</a></li>
-		<li class="nav-item"><a class="nav-link" style="color: #003a31;" href="product-category">Jewelry & Watch Tools</a></li>
+		<li class="nav-item"><a class="nav-link" style="color: #003a31;" href="index.php?page=category">Jewelry & Watch Tools</a></li>
 		<li class="nav-item"><a class="nav-link" style="color: #003a31;" href="http://www.intrade-dental.com" target="_blank">Dental & Orthopedic Instruments</a></li>
 		<li class="nav-item"><a class="nav-link" style="color: #003a31;" href="contact-us">Contact</a></li>
 	</ul>

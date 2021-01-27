@@ -6,6 +6,7 @@
 			<th> Name </th>
 			<th> Company </th>
 			<th> Email </th>
+			<th> Website </th>
 		</tr>
 		<?php 
 			$select = "SELECT * FROM catalogsent";
@@ -18,6 +19,7 @@
 						<td> <?php echo $row['name'];?> </td>
 						<td> <?php echo $row['company'];?> </td>
 						<td> <?php echo $row['email'];?> </td>
+						<td> <?php echo $row['website'];?> </td>
 					</tr>
 
 					<?php

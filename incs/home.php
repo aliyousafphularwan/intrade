@@ -1,6 +1,6 @@
 <!-- slider -->
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<?php include "incs/slider.php";?>
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
  
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -24,7 +24,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</div> -->
 
 	<!-- about -->
 

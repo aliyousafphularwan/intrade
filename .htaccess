@@ -6,7 +6,7 @@ ErrorDocument 500 http://localhost/prjs/website/admin/error-500.php
 
 RewriteRule		^home?$		http://localhost/prjs/website/index.php	[QSA,NC,L]
 
-#RewriteRule		^home?$		http://localhost/prjs/website/index.php	[QSA,NC,L]
+RewriteRule		^home?$		http://localhost/prjs/website/index.php	[QSA,NC,L]
 
 RewriteRule		^product-category?$	http://localhost/prjs/website/index.php?page=category	[NC,L]
 

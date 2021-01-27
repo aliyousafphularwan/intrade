@@ -82,6 +82,7 @@
 					<tr>
 						<td> <input type="text" class="form-control" name="porigin" placeholder="Product Origin"> </td>
 						<td> <input type="file" name="pimg"> </td>
+    					<td> <input type="text" class="form-control" name="palt" value="<?php echo $row['product_alt'];?>"> </td>
 					</tr>
 
 					<tr>
@@ -123,13 +124,14 @@
 		$psmcat = $_POST['psmcat'];
 		$porigin = $_POST['porigin'];
 		$pdesc = $_POST['pdesc'];
+		$palt = $_POST['palt'];
 
 		$file_name = $_FILES["pimg"]["name"];
 		$file_size = $_FILES["pimg"]["size"];
 		$file_temp = $_FILES["pimg"]["tmp_name"];
 		$file_type = $_FILES["pimg"]["type"];
 
-		$update = "UPDATE products SET product_name = '$pname', product_art ='$part', product_pageno ='$ppage', product_main_cat = '$pmaincat', product_sub_cat = '$psubcat', smcat = '$psmcat',product_origin = '$porigin', product_desc ='$pdesc', product_img = '$file_name' WHERE id = '$id'" or die(mysqli_error());
+		$update = "UPDATE products SET product_name = '$pname', product_art ='$part', product_pageno ='$ppage', product_main_cat = '$pmaincat', product_sub_cat = '$psubcat', smcat = '$psmcat',product_origin = '$porigin', product_desc ='$pdesc', product_img = '$file_name',product_alt='$palt' WHERE id = '$id'" or die(mysqli_error());
 		$ures = mysqli_query($conn, $update);
 		
 		if (!$ures) {

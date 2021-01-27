@@ -52,6 +52,7 @@
 				<tr>
 					<td colspan=""> <input type="file" class="form-control" name="pimg"> </td>
 					<td> <input type="text" class="form-control" name="porig" placeholder="Product Origin"> </td>
+					<td> <input type="text" class="form-control" name="palt" placeholder="Image Alt Text"> </td>
 				</tr>
 
 				<tr>
@@ -88,6 +89,7 @@
 		$subcat = $_POST["psubcat"];
 		$porig = $_POST['porig'];
 		$descr = $_POST["pdesc"];
+		$alttxt = $_POST["palt"];
 
 		$file_name = $_FILES["pimg"]["name"];
 		$file_size = $_FILES["pimg"]["size"];
@@ -98,7 +100,7 @@
 		$select = "SELECT * FROM products WHERE product_art = '$artno'";
 		$sres = mysqli_query($conn, $select);
 		if (mysqli_num_rows($sres) == 0) {
-			$insert = "INSERT INTO products (product_name, product_art, product_pageno, product_main_cat, product_sub_cat, smcat,product_origin, product_desc, product_img) VALUES ('$name', '$artno','$pageno', '$maincat', '$subcat','$smcat','$porig', '$descr', '$file_name')" or die(mysql_error());
+			$insert = "INSERT INTO products (product_name, product_art, product_pageno, product_main_cat, product_sub_cat, smcat,product_origin, product_desc, product_img, product_alt) VALUES ('$name', '$artno','$pageno', '$maincat', '$subcat','$smcat','$porig', '$descr', '$file_name','$alttxt')" or die(mysql_error());
 			$ires = mysqli_query($conn, $insert);
 
 			if ($ires) {

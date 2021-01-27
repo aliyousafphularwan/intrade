@@ -64,7 +64,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="index.php?page=logout">
+                <a class="nav-link" href="index.php?page=signout">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Signout</span></a>
             </li>
